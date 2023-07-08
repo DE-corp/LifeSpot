@@ -18,8 +18,11 @@
     color: aliceblue;
 }
 
+/*Глобальные стили для хедеров на всём сайте*/
 header {
+    color: black;
     padding-left: 1%;
+    padding-top: 1.2%;
 }
 
 footer {
