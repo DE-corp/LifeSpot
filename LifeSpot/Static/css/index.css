@@ -3,9 +3,19 @@
     padding-left: 1%;
 }
 
-.navbar {
+/*.navbar {
     color: darkgray;
     padding-left: 15%;
+}*/
+/* Стили панели навигации */
+.navbar p {
+    color: darkgray;
+    padding-left: 15%;
+}
+
+/* Стили панели навигации при наведении мышью */
+.navbar p:hover {
+    color: aliceblue;
 }
 
 header {
