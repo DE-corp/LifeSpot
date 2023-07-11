@@ -30,6 +30,25 @@ header {
     padding-top: 1.2%;
 }
 
+.search-video-form {
+    margin: 2% 0%;
+}
+
+    .search-video-form input {
+        font-size: medium;
+        border-radius: 4px;
+        font-family: Tahoma;
+        border: 1px solid #999;
+    }
+
+        .search-video-form input[type="submit"]:hover {
+            background-color: rgb(80, 119, 191);
+        }
+
+        .search-video-form input[type="search"]:focus {
+            background-color: rgb(120, 147, 196);
+        }
+
 footer {
     position: absolute;
     bottom: 0;
