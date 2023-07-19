@@ -30,6 +30,7 @@ header {
     padding-top: 1.2%;
 }
 
+/*Стили формы поиска видео*/
 .search-video-form {
     margin: 2% 0%;
 }
@@ -41,13 +42,10 @@ header {
         border: 1px solid #999;
     }
 
-        .search-video-form input[type="submit"]:hover {
-            background-color: rgb(80, 119, 191);
+        .search-video-form input[type="text"]:hover, :focus {
+            background-color: #f3f3f3;
         }
 
-        .search-video-form input[type="search"]:focus {
-            background-color: rgb(120, 147, 196);
-        }
 
 footer {
     position: absolute;
