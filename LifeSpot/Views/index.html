@@ -25,7 +25,11 @@
         </div>-->
 
         <div class="search-video-form">
-            <input type="text" oninput="alert('Пользователь вводит текст')" placeholder="Начните писать название видео" size="50">
+            <input type="text"
+                   oninput="
+    let inputText = document.getElementsByTagName('input')[0].value;
+    alert(inputText);"
+                   placeholder="Начните писать название видео" size="50">
         </div>
 
     </header>
