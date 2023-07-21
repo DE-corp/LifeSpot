@@ -4,6 +4,14 @@
 *
 * */
 
+// Логирование сессии (объявлено через expression)
+let sessionLog = function logSession(session) {
+    // Вывод в консоль
+    for (let result of session) {
+        console.log(result)
+    }
+}
+
 function handleSession() {
 
     // создадим объект Map для хранения сессии
@@ -25,10 +33,9 @@ function handleSession() {
         alert("Наши трансляции не предназначены для лиц моложе 18 лет. Вы будете перенаправлены");
         window.location.href = "http://www.google.com"
     }
-    // Вывод в консоль
-    for (let result of session) {
-        console.log(result)
-    }
+
+    // Теперь мы возвращаем объект сессии
+    return session
 }
 
 

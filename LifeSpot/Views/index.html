@@ -9,10 +9,13 @@
     <script src="../Static/scripts/index.js" type="text/javascript"></script>
 
     <!-- Внутренний скрипт с вызовами функций -->
-    <!--<script>
-        // Запись сессии пользователя
-        handleSession();
-    </script>-->
+    <script>
+        // Создадим и обработаем сессию
+        let session = handleSession();
+
+        // Логируем в консоль.
+        sessionLog(session)
+    </script>
 
 </head>
 
@@ -34,7 +37,7 @@
         </div>-->
 
         <div class="search-video-form">
-            <input type="text" oninput="filterContent( document.getElementsByTagName('input')[0].value.toLowerCase() /* Аргумент - значение, введённое пользователем*/" placeholder="Начните писать название видео" size="50">
+            <input type="text" oninput="filterContent( document.getElementsByTagName('input')[0].value.toLowerCase() /* Аргумент - значение, введённое пользователем*/)" placeholder="Начните писать название видео" size="50">
         </div>
 
     </header>
