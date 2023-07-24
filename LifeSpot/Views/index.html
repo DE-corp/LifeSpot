@@ -11,10 +11,10 @@
     <!-- Внутренний скрипт с вызовами функций -->
     <script>
         // Создадим и обработаем сессию
-        let session = handleSession();
+        //let session = handleSession();
 
         // Логируем в консоль.
-        sessionLog(session)
+        //sessionLog(session)
     </script>
 
 </head>
@@ -37,7 +37,16 @@
         </div>-->
 
         <div class="search-video-form">
-            <input type="text" oninput="filterContent( document.getElementsByTagName('input')[0].value.toLowerCase() /* Аргумент - значение, введённое пользователем*/)" placeholder="Начните писать название видео" size="50">
+            <input type="text" oninput="
+        // Функция объявлена через declaration
+       const inputParseFunction = function(){
+           return document.getElementsByTagName('input')[0].value.toLowerCase();
+       }
+
+       // Вызов (функция в аргумент передаётся без круглых скобок)
+       filterContent( inputParseFunction )
+
+" placeholder="Начните писать название видео" size="50">
         </div>
 
     </header>
