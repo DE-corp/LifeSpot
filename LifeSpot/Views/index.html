@@ -10,11 +10,13 @@
 
     <!-- Внутренний скрипт с вызовами функций -->
     <script>
-        // Создадим и обработаем сессию
-        //let session = handleSession();
+        // let session = handleSession();
+        // sessionLog(session)
 
-        // Логируем в консоль.
-        //sessionLog(session)
+        // Функция объявлена через declaration
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
     </script>
 
 </head>
