@@ -94,3 +94,17 @@ function addLike(id) {
     // Обновим текст элемента
     element.innerText = array.join(' ')
 }
+
+// Слайдер изображений
+let currentSlide = 1;
+function showSlides() {
+    let slides = document.getElementsByClassName("slide_item");
+
+
+    if (currentSlide >= slides.length) { currentSlide = 0 }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[currentSlide].style.display = "block";
+    currentSlide += 1;
+}
