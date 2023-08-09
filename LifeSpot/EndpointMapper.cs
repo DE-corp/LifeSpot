@@ -51,6 +51,7 @@ namespace LifeSpot
         {
             string footerHtml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "footer.html"));
             string sideBarHtml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "sidebar.html"));
+            string sliderHtml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "slider.html"));
 
             builder.MapGet("/", async context =>
             {
@@ -81,10 +82,11 @@ namespace LifeSpot
             {
                 var viewPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "about.html");
 
-                // Загружаем шаблон страницы, вставляя в него элементы
                 var html = new StringBuilder(await File.ReadAllTextAsync(viewPath))
                     .Replace("<!--SIDEBAR-->", sideBarHtml)
-                    .Replace("<!--FOOTER-->", footerHtml);
+                    .Replace("<!--FOOTER-->", footerHtml)
+                    // Добавим для загрузки слайдера
+                    .Replace("<!--SLIDER-->", sliderHtml);
 
                 await context.Response.WriteAsync(html.ToString());
             });
